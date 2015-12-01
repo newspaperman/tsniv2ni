@@ -57,6 +57,9 @@ void processEti(char* buf, int len, bool isStarting) {
 
 
 int main(int argc, char** argv) {
+	if(argc!=2) {
+		fprintf(stderr,"Usage: %s <pid>\n",argv[0]);
+	}
 	inbuf = &cin;
 	outbuf = &cout;
 	size=200;
