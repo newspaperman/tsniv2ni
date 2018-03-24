@@ -6,4 +6,4 @@ tsniv2ni: $(OBJECTS)
 	$(CXX) -o $(NAME) $(OBJECTS)
 
 clean:
-    rm -f $(NAME) $(OBJECTS)
+	rm -f $(NAME) $(OBJECTS)
