@@ -29,7 +29,7 @@ int size;
 bool active=false;
 const char fsync0[]="\xff\x07\x3a\xb6";
 const char fsync1[]="\xff\xf8\xc5\x49";
-char * frpd;
+char* frpd;
 int count;
 
 void processEti(char* buf, int len, bool isStarting) {
