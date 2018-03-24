@@ -27,8 +27,8 @@ istream* inbuf;
 ostream* outbuf;
 int size;
 bool active=false;
-const char fsync0[]={0xff, 0x07,0x3a,0xb6};
-const char fsync1[]={0xff, 0xf8,0xc5,0x49};
+const char fsync0[]="\xff\x07\x3a\xb6";
+const char fsync1[]="\xff\xf8\xc5\x49";
 char * frpd;
 int count;
 
