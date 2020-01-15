@@ -1,10 +1,10 @@
 CXX ?= g++
 NAME = tsniv2ni
-OBJECTS = tsniv2ni.cpp
+OBJECTS = tsniv2ni.o
 DESTDIR ?=
 
 tsniv2ni: $(OBJECTS)
-	$(CXX) -o $(NAME) $(OBJECTS)
+	$(CXX) $(LDFLAGS) -o $(NAME) $(OBJECTS)
 
 clean:
 	rm -f $(NAME) $(OBJECTS)
