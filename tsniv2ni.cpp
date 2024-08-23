@@ -21,10 +21,10 @@
 #include<string.h>
 #include<stdlib.h>
 
-using namespace std;
+// using namespace std; fixes problems under Ubuntu 22.04 and 24.04
 
-istream* inbuf;
-ostream* outbuf;
+std::istream* inbuf;
+std::ostream* outbuf;
 int size;
 bool active=false;
 const char fsync0[]="\xff\x07\x3a\xb6";
@@ -60,8 +60,8 @@ int main(int argc, char** argv) {
 	if(argc!=2) {
 		fprintf(stderr,"Usage: %s <pid>\n",argv[0]);
 	}
-	inbuf = &cin;
-	outbuf = &cout;
+	inbuf = &std::cin;
+	outbuf = &std::cout;
 	size=200;
 	char* packets= new char[size*188];
 	frpd= new char[6140];
